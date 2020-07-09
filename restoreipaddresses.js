@@ -26,9 +26,11 @@ function backtrack(temp, s) {
         if (s.length < i) {
             continue
         }
+        
+        //Check the string before pushing it in
         let string = s.slice(0, i)
         //If the first character in the string is '0' or if the number is greater than 255
-        if ((string.length > 0 && string[0] == '0') || parseInt(string) > 255) {
+        if ((string.length > 1 && string[0] == '0') || parseInt(string) > 255) {
             continue
         }
 
